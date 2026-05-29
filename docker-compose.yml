@@ -2,7 +2,7 @@ services:
   app:
     build: .
     ports:
-      - "8080:8080"   # your machine's port 8080 → container's port 8080
+      - "0.0.0.0:8080:8080" #Anyone can access it 
     env_file:
       - .env          # loads all your DB_* variables from the .env file
     restart: unless-stopped
